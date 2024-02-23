@@ -9,4 +9,4 @@ elif num2>num1 and num2>num3:
     print ("El número mayor es el segundo número:", num2)
 
 else:
-    print ("El número mayor es el tercer número:", num3)
+    print ("El número mayor es el tercer número:", num3 )
