@@ -51,6 +51,32 @@ items_Bebidas =(f"{Bebidas.keys()}{Bebidas.values()}")
 list_Bebidas = list(Bebidas.keys())
 valor_Bebidas= list(Bebidas.values())
 
-for i, n in enumerate (keys_Salado):
-    print (f"{i+1}.{keys_Salado[i]} = ${valor_Salado[i]}")
+
+
+print("\n******************************************************")
+print("\tBienvenido a la Panadería de Kathe")
+print("******************************************************\n")
+
+print("Tenemos las siguientes categorías de productos")
+print("""
+      1. Panadería Salada
+      2. Postres
+      3. Bebidas
+      """)
+
+opcion=int(input("Ingrese el número correspondiente a la opción que desea consultar: "))
+
+
+#CONDICIONAL PARA OPCION 1 - PANADERIA SALADA
+if opcion==1:
+    print ("\n\tPANADERIA SALADA\n")
+    for i,_ in enumerate (keys_Salado):  #Se colocó guión bajo porque no vamos a utilizar ese valor de la lista. 
+        
+        print(f"{i}.{keys_Salado[i]} = ${valor_Salado[i]}")
+
+    opcion = int(input("\n¿Qué opción desea? "))
+    print (f"\nUsted ha seleccionado '{keys_Salado[opcion]}', el cual tiene un valor de ${valor_Salado[opcion]}")
+
+    
+
 
