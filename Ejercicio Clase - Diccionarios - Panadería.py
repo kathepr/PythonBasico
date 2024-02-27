@@ -75,8 +75,16 @@ if opcion==1:
         print(f"{i}.{keys_Salado[i]} = ${valor_Salado[i]}")
 
     opcion = int(input("\n¿Qué opción desea? "))
-    print (f"\nUsted ha seleccionado '{keys_Salado[opcion]}', el cual tiene un valor de ${valor_Salado[opcion]}")
+    print (f"\nUsted ha seleccionado '{keys_Salado[opcion]}', este producto tiene un valor de ${valor_Salado[opcion]}")
 
-    
+    #CREACIÓN DE PROMOCIONES PARA PANADERIA SALADA: 
+    if opcion ==5:
+        print (f"\n****************      ¡Hoy tenemos 2x1 en {keys_Salado[opcion]}!      ****************")
+    elif opcion ==3:  
+        print (f"\n****************      ¡Hoy tenemos {keys_Salado[opcion]} a mitad de precio!      ****************")  
+
+    #PREGUNTAR CON CUANTO DINERO PAGA EL CLIENTE:    
+
+
 
 
