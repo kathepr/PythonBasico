@@ -58,8 +58,8 @@ print("******************************************************\n")
 print("Tenemos las siguientes categorías de productos")
 print("""
       1. Panadería Salada
-      2. Postres
-      3. Bebidas
+      2. Postres (CATEGORIA EN CONSTRUCCIÓN)
+      3. Bebidas (CATEGORÍA EN CONSTRUCCIÓN)
       """)
 
 opcion=int(input("Ingrese el número correspondiente a la opción que desea consultar: "))
