@@ -103,6 +103,9 @@ if opcion==1:
 
 
     else:
-        print(f"\nUsted desea {unidad} unidades de {keys_Salado[opcion]}, las cuales cuestan ${PagoTotal}, le falta un total de ${-vueltos} ")    
+        print(f"\nUsted desea {unidad} unidades de {keys_Salado[opcion]}, las cuales cuestan ${PagoTotal}, le falta un total de ${-vueltos} ")  
+
+#DESPEDIDA:
+print ("Gracias por su compra. ¡Lindo día!")  
     
     
