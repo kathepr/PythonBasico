@@ -86,37 +86,5 @@ if opcion==1:
 
     #PREGUNTAR CON CUANTO DINERO PAGA EL CLIENTE:  
     dinero = int(input("\nIngrese la cantidad de dinero disponible: ")) 
-    totalDinero = dinero*unidad 
     
-    #if keys_Salado[opcion] == 3:
-    #    totalDinero = (dinero*unidad)/2
-
     
-    vueltos= totalDinero - valor_Salado[opcion]
-
-      
-    #CONDICIONAL PARA VUELTOS:
-    if dinero >= valor_Salado[opcion]:
-        if opcion == 5:
-            promo = unidad * 2
-            print (f"\nUsted compró {unidad} unidades de {keys_Salado[opcion]}. Por nuestra promoción 2x1, le entregamos {promo} unidades.")
-            print (f"\nEl total a pagar es ${totalDinero} y sus vueltos son: ${vueltos}")
-
-        elif opcion == 3:
-            totalDinero = (dinero*unidad)/2
-            print (f"\nUsted compró {unidad} unidades de {keys_Salado[opcion]}. Por nuestra promoción a mitad de precio, el total a pagar es ${totalDinero} y sus vueltos son: ${vueltos}") 
-        
-        else:
-             print(f"\nUsted compró {unidad} unidades de {keys_Salado[opcion]}. El total a pagar es ${totalDinero} y sus vueltos son {vueltos}")
-
-    else:
-        print(f"\nUsted desea {unidad} unidades de {keys_Salado[opcion]}. El total a pagar es ${totalDinero}, le falta un total de ${-vueltos}.")
-
-        
-
-
-        
-
-
-
-
