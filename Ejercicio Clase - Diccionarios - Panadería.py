@@ -78,7 +78,7 @@ if opcion==1:
     #CREACIÓN DE PROMOCIONES PARA PANADERIA SALADA: 
     if opcion ==3:
         print (f"\n****************   PROMO   ¡Hoy te llevas el doble de {keys_Salado[opcion]}!      ****************")
-    elif opcion ==6:  
+    elif opcion ==8:  
         print (f"\n****************   PROMO   ¡Hoy te llevas {keys_Salado[opcion]} más un jugo de naranja!      ****************")  
     
     #PREGUNTAR POR NÚMERO DE UNIDADES A COMPRAR
@@ -93,16 +93,16 @@ if opcion==1:
         
         if opcion == 3:
             unidad_promo= unidad*2
-            print (f"Gracias a la promo usted se lleva {unidad_promo} unidades de {keys_Salado[opcion]} por {PagoTotal}, sus vueltos son {vueltos}")
+            print (f"\nGracias a la promo usted se lleva {unidad_promo} unidades de {keys_Salado[opcion]} por {PagoTotal}, sus vueltos son {vueltos}")
 
-        elif opcion ==6:
-            print (f"Gracias a la promo usted se lleva {unidad} unidades de {keys_Salado[opcion]} más un jugo de naranja por ${PagoTotal}, sus vueltos son ${vueltos}")
+        elif opcion ==8:
+            print (f"\nGracias a la promo usted se lleva {unidad} unidades de {keys_Salado[opcion]} más un jugo de naranja por ${PagoTotal}, sus vueltos son ${vueltos}")
 
         else:    
-            print(f"Usted compró {unidad} unidades de {keys_Salado[opcion]}, las cuales costaron {PagoTotal} y sus vueltos son: ${vueltos}")
+            print(f"\nUsted compró {unidad} unidades de {keys_Salado[opcion]}, las cuales costaron {PagoTotal} y sus vueltos son: ${vueltos}")
 
 
     else:
-        print(f"Usted desea {unidad} unidades de {keys_Salado[opcion]}, las cuales cuestan ${PagoTotal}, le falta un total de ${-vueltos} ")    
+        print(f"\nUsted desea {unidad} unidades de {keys_Salado[opcion]}, las cuales cuestan ${PagoTotal}, le falta un total de ${-vueltos} ")    
     
     
