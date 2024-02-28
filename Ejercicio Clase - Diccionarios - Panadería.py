@@ -12,7 +12,6 @@ Salado={"Baguete":4000,
           "Empanada":2000
           }
 
-
 Postres={"Torta de Chocolate":25000,
          "Cheesecake de fresa": 30000,
          "Tarta de limón":20000,
@@ -24,7 +23,6 @@ Postres={"Torta de Chocolate":25000,
          "Crepe de nutella":15000,
          "Alfajor": 5000
          }
-
 
 Bebidas={"Tinto":2000,
          "Aguapanela":2000,
@@ -82,8 +80,42 @@ if opcion==1:
         print (f"\n****************      ¡Hoy tenemos 2x1 en {keys_Salado[opcion]}!      ****************")
     elif opcion ==3:  
         print (f"\n****************      ¡Hoy tenemos {keys_Salado[opcion]} a mitad de precio!      ****************")  
+    
+    #PREGUNTAR POR NÚMERO DE UNIDADES A COMPRAR
+    unidad=int(input(f"\n¿Cuantas unidades de {keys_Salado[opcion]} desea comprar? "))
 
-    #PREGUNTAR CON CUANTO DINERO PAGA EL CLIENTE:    
+    #PREGUNTAR CON CUANTO DINERO PAGA EL CLIENTE:  
+    dinero = int(input("\nIngrese la cantidad de dinero disponible: ")) 
+    totalDinero = dinero*unidad 
+    
+    #if keys_Salado[opcion] == 3:
+    #    totalDinero = (dinero*unidad)/2
+
+    
+    vueltos= totalDinero - valor_Salado[opcion]
+
+      
+    #CONDICIONAL PARA VUELTOS:
+    if dinero >= valor_Salado[opcion]:
+        if opcion == 5:
+            promo = unidad * 2
+            print (f"\nUsted compró {unidad} unidades de {keys_Salado[opcion]}. Por nuestra promoción 2x1, le entregamos {promo} unidades.")
+            print (f"\nEl total a pagar es ${totalDinero} y sus vueltos son: ${vueltos}")
+
+        elif opcion == 3:
+            totalDinero = (dinero*unidad)/2
+            print (f"\nUsted compró {unidad} unidades de {keys_Salado[opcion]}. Por nuestra promoción a mitad de precio, el total a pagar es ${totalDinero} y sus vueltos son: ${vueltos}") 
+        
+        else:
+             print(f"\nUsted compró {unidad} unidades de {keys_Salado[opcion]}. El total a pagar es ${totalDinero} y sus vueltos son {vueltos}")
+
+    else:
+        print(f"\nUsted desea {unidad} unidades de {keys_Salado[opcion]}. El total a pagar es ${totalDinero}, le falta un total de ${-vueltos}.")
+
+        
+
+
+        
 
 
 
