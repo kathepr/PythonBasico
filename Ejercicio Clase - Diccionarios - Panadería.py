@@ -86,5 +86,13 @@ if opcion==1:
 
     #PREGUNTAR CON CUANTO DINERO PAGA EL CLIENTE:  
     dinero = int(input("Ingrese la cantidad de dinero disponible: ")) 
+    PagoTotal = valor_Salado[opcion] * unidad
+    vueltos = dinero - PagoTotal
+
+    if dinero>=PagoTotal:
+        
+        print(f"Usted compró {unidad} unidades de {keys_Salado[opcion]}, las cuales costaron {PagoTotal} y sus vueltos son: ${vueltos}")
+    else:
+        print(f"Usted desea {unidad} unidades de {keys_Salado[opcion]}, las cuales cuestan {PagoTotal}, le falta un total de ${-vueltos} ")    
     
     
