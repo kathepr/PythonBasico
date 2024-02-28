@@ -55,19 +55,20 @@ print("\n******************************************************")
 print("\tBienvenido a la Panadería de Kathe")
 print("******************************************************\n")
 
-print("Tenemos las siguientes categorías de productos")
-print("""
-      1. Panadería Salada
-      2. Postres (CATEGORIA EN CONSTRUCCIÓN)
-      3. Bebidas (CATEGORÍA EN CONSTRUCCIÓN)
-      """)
+print("\tCATEGORÍA DE PRODUCTOS\n")
+print("1. Panadería Salada")
+print("\033[2m2. Postres (CATEGORIA EN CONSTRUCCIÓN)\033[0m")
+print("\033[2m3. Bebidas (CATEGORÍA EN CONSTRUCCIÓN)\033[0m")
 
-opcion=int(input("Ingrese el número correspondiente a la opción que desea consultar: "))
+print("\n")
+opcion=int(input("Ingrese la categoría que desea consultar: "))
 
 
 #CONDICIONAL PARA OPCION 1 - PANADERIA SALADA
 if opcion==1:
+    print("\n*********************************")
     print ("\n\tPANADERIA SALADA\n")
+    print("*********************************\n")
     for i,_ in enumerate (keys_Salado):  #Se colocó guión bajo porque no vamos a utilizar ese valor de la lista. 
         
         print(f"{i}.{keys_Salado[i]} = ${valor_Salado[i]}")
@@ -77,9 +78,13 @@ if opcion==1:
 
     #CREACIÓN DE PROMOCIONES PARA PANADERIA SALADA: 
     if opcion ==3:
-        print (f"\n****************   PROMO   ¡Hoy te llevas el doble de {keys_Salado[opcion]}!      ****************")
+        print("\n\t        **********************************************")
+        print (f"                PROMO   ¡Hoy te llevas el doble de {keys_Salado[opcion]}!      ")
+        print("\t       **************************************************")
     elif opcion ==8:  
-        print (f"\n****************   PROMO   ¡Hoy te llevas {keys_Salado[opcion]} más un jugo de naranja!      ****************")  
+        print("\n\t       **********************************************************")
+        print (f"              PROMO   ¡Hoy te llevas {keys_Salado[opcion]} + un jugo de naranja!      ") 
+        print("\t     ****************************************************************") 
     
     #PREGUNTAR POR NÚMERO DE UNIDADES A COMPRAR
     unidad=int(input(f"\n¿Cuantas unidades de {keys_Salado[opcion]} desea comprar? "))
@@ -96,7 +101,7 @@ if opcion==1:
             print (f"\nGracias a la promo usted se lleva {unidad_promo} unidades de {keys_Salado[opcion]} por {PagoTotal}, sus vueltos son {vueltos}")
 
         elif opcion ==8:
-            print (f"\nGracias a la promo usted se lleva {unidad} unidades de {keys_Salado[opcion]} más un jugo de naranja por ${PagoTotal}, sus vueltos son ${vueltos}")
+            print (f"\nGracias a la promo usted se lleva {unidad} unidades de {keys_Salado[opcion]} + un jugo de naranja por ${PagoTotal}, sus vueltos son ${vueltos}")
 
         else:    
             print(f"\nUsted compró {unidad} unidades de {keys_Salado[opcion]}, las cuales costaron {PagoTotal} y sus vueltos son: ${vueltos}")
