@@ -70,7 +70,7 @@ dinero = int(input("¿Con cuanto dinero paga? "))
 pago_total = cantidad * precio
 vueltos = dinero - pago_total
 
-#PROMOCIONES (INCLUYE TODAS LAS CATEGORIAS)
+#PROMOCIONES (APLICA A TODAS LAS CATEGORIAS)
 if opcion==3:
     print ("\n¡Por nuestra PROMO! Hoy le regalamos una chocolatina Hershey, sin costo adicional")
 elif opcion==5:
