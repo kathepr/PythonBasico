@@ -49,7 +49,8 @@ print("2. Postres")
 print("3. Bebidas")
 
 print("\n")
-categoria = (int(input("\nIngrese la categoría que desea consultar ")))
+categoria = (int(input("Ingrese la categoría que desea consultar ")))
+print("\n")
 
 keys_menu = list(menu.keys())   # Se trajo las keys del menú (salado, postres)
 
