@@ -49,7 +49,7 @@ print("2. Postres")
 print("3. Bebidas")
 
 print("\n")
-categoria = (int(input("Ingrese la categoría que desea consultar ")))
+categoria = (int(input("\nIngrese la categoría que desea consultar ")))
 
 keys_menu = list(menu.keys())   # Se trajo las keys del menú (salado, postres)
 
@@ -59,7 +59,7 @@ keys_productos=list(productos.keys())
 for i, producto in enumerate(keys_productos):
     print(f"{i+1}.{producto} = ${productos[producto]}")
 
-opcion = int(input("¿Que producto desea? "))
+opcion = int(input("\n¿Que producto desea? "))
 precio = productos[keys_productos[opcion-1]]
 
 cantidad = int(input("¿Cuantas unidades quiere? "))
@@ -69,12 +69,21 @@ dinero = int(input("¿Con cuanto dinero paga? "))
 pago_total = cantidad * precio
 vueltos = dinero - pago_total
 
+#PROMOCIONES (INCLUYE TODAS LAS CATEGORIAS)
+if opcion==3:
+    print ("\n¡Por nuestra PROMO! Hoy le regalamos una chocolatina Hershey, sin costo adicional")
+elif opcion==5:
+    print ("\n¡Por nuestra PROMO! Hoy se lleva su compra a mitad de precio\n")    
+    pago_total //= 2
+    vueltos = dinero - pago_total
+
 if dinero>=pago_total:
         
     print(f"\nUsted compró {cantidad} unidades de {keys_productos[opcion-1]}, las cuales costaron {pago_total} y sus vueltos son: ${vueltos}")
+    print ("Gracias por su compra ¡Lindo día! ")  
 
 else:
-    print(f"\nUsted desea {cantidad} unidades de {keys_productos[opcion-1]}, las cuales cuestan ${pago_total}, le falta un total de ${-vueltos} ")  
+    print(f"\nUsted desea {cantidad} unidades de {keys_productos[opcion-1]}, las cuales cuestan ${pago_total}, le falta un total de ${-vueltos} ")
+    print ("Vuelva pronto ¡Lindo día! ")    
 
 
-print ("Gracias por su compra. ¡Lindo día! ")  
